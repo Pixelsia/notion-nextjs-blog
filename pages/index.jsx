@@ -23,7 +23,6 @@ export default function Home({ posts }) {
             </p>
           </div>
         </div>
-        <AnimationBg />
       </div>
       <div className="max-w-2xl mx-auto mb-16 px-4 sm:px-0">
         <h2 className="font-bold text-2xl md:text-3xl tracking-tight mb-4 mt-8 text-black">

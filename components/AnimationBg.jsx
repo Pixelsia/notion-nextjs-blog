@@ -1,7 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
-import * as THREE from 'three'
-import GLOBE from 'vanta/dist/vanta.globe.min'
-
+import GLOBE from '../lib/vanta/vanta.globe.js'
 const AnimationContainer = () => {
   const [vantaEffect, setVantaEffect] = useState(0)
   const containerRef = useRef(null)
@@ -10,10 +8,10 @@ const AnimationContainer = () => {
       ;(async () => {
         const [THREE, GLOBE] = await Promise.all([
           import('three'),
-          import('vanta/dist/vanta.globe.min'),
+          import('../lib/vanta/vanta.globe.js'),
         ])
         setVantaEffect(
-          GLOBE.default({
+          new GLOBE.default({
             el: containerRef.current,
             mouseControls: true,
             touchControls: true,

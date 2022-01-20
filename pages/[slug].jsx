@@ -14,12 +14,7 @@ export default function Post({ page, blocks }) {
     <BlogLayout data={page} content={blocks}>
       {page.properties.Thumbnail.files.length > 0 && (
         <div className="">
-          <Image
-            src={page.properties.Thumbnail.files[0].file.url}
-            objectFit="cover"
-            width={720}
-            height={360}
-          />
+          <img src={page.properties.Thumbnail.files[0].file.url} />
         </div>
       )}
       <span className="text-sm text-gray-700">
