@@ -82,9 +82,19 @@ export default function Post({ page, blocks }) {
   )
 }
 
+export const getStaticPaths = async () => {
+  const database = await getNotionData(databaseId)
+  return {
+    paths: database.map((page) => ({
+      params: {
+        slug: page.properties.Slug.rich_text[0].plain_text,
+      },
+    })),
+    fallback: false,
+  }
+}
 
-
-export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
   const { slug } = context.params
   const database = await getNotionData(databaseId)
   const filter = database.filter((blog) => blog.properties.Slug.rich_text[0].plain_text === slug)
