@@ -1,4 +1,5 @@
 import BlogLayout from '../layouts/BlogLayout'
+import Image from 'next/image'
 import { getNotionData, getPage, getBlocks } from '../lib/getNotionData'
 import { Text, ListItem, Heading, ToDo, Toggle } from '../components/ContentBlocks'
 
@@ -11,6 +12,16 @@ export default function Post({ page, blocks }) {
 
   return (
     <BlogLayout data={page} content={blocks}>
+      {page.properties.Thumbnail.files.length > 0 && (
+        <div className="">
+          <Image
+            src={page.properties.Thumbnail.files[0].file.url}
+            objectFit="cover"
+            width={720}
+            height={360}
+          />
+        </div>
+      )}
       <span className="text-sm text-gray-700">
         {new Date(page.created_time).toLocaleString('en-US', {
           month: 'short',

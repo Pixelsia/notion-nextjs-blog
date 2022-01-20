@@ -1,12 +1,7 @@
 import Link from 'next/link'
 
 const ExternalLink = ({ href, children }) => (
-  <a
-    className="p-1 sm:p-4 text-white hover:underline"
-    target="_blank"
-    rel="noopener noreferrer"
-    href={href}
-  >
+  <a className="p-1 sm:p-4 hover:underline" target="_blank" rel="noopener noreferrer" href={href}>
     {children}
   </a>
 )
@@ -20,7 +15,7 @@ export default function Nav() {
 
       <div>
         <Link href="/">
-          <a className="p-1 sm:p-4 text-white hover:underline">Home</a>
+          <a className="p-1 sm:p-4 hover:underline">Home</a>
         </Link>
         <ExternalLink href="https://twitter.com/Pixelsia_JP">Contact</ExternalLink>
         <ExternalLink href="https://github.com/Pixelsia/pixelsia_blog">Source Code</ExternalLink>

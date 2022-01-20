@@ -1,4 +1,5 @@
 import Container from '../components/Container'
+import Nav from '../components/Nav'
 
 export default function BlogLayout({ children, data }) {
   return (
@@ -8,7 +9,8 @@ export default function BlogLayout({ children, data }) {
       date={new Date(data.properties.Date.date.start)}
       type="article"
     >
-      <article className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 w-full">
+      <Nav />
+      <article className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 w-full px-4">
         {children}
       </article>
     </Container>
