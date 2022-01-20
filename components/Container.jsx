@@ -35,8 +35,8 @@ export default function Container(props) {
         <meta name="twitter:image" content={meta.image} />
         {meta.date && <meta property="article:published_time" content={meta.date} />}
       </Head>
-      <Nav />
-      <main id="skip" className="px-4">
+
+      <main id="skip">
         {children}
         <Footer />
       </main>
