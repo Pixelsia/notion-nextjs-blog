@@ -13,9 +13,12 @@
     "url": "git+https://github.com/luciovilla/notion-nextjs-blog.git"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "preexport": "npm run build",
+    "export": "next export",
+    "prestart": "npm run export",
+    "start": "serve out"
   },
   "dependencies": {
     "@notionhq/client": "0.4.4",
