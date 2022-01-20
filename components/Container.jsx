@@ -10,7 +10,7 @@ export default function Container(props) {
     title: 'Pixelsiaの開発ブログ',
     description: `しょうもない記事から、おもしろい記事まで、Pixelsiaの開発ブログです。`,
     type: 'website',
-    image: '/site.png',
+    image: 'https://blog.pixelsia.net/site.png',
     ...customMeta,
   }
 
@@ -21,8 +21,8 @@ export default function Container(props) {
         <meta name="robots" content="follow, index" />
         <meta name="viewport" content="width=device-width" />
         <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`https://blog.luciovilla.com${router.asPath}`} />
-        <link rel="canonical" href={`https://blog.luciovilla.com${router.asPath}`} />
+        <meta property="og:url" content={`https://https://blog.pixelsia.net${router.asPath}`} />
+        <link rel="canonical" href={`https://blog.pixelsia.net${router.asPath}`} />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content={meta.title} />
         <meta property="og:description" content={meta.description} />
