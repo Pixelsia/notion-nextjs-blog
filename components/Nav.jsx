@@ -22,10 +22,8 @@ export default function Nav() {
         <Link href="/">
           <a className="p-1 sm:p-4 text-gray-900 hover:underline">Home</a>
         </Link>
-        <ExternalLink href="https://twitter.com/luciovilla">Contact</ExternalLink>
-        <ExternalLink href="https://github.com/luciovilla/notion-nextjs-blog">
-          Source Code
-        </ExternalLink>
+        <ExternalLink href="https://twitter.com/Pixelsia_JP">Contact</ExternalLink>
+        <ExternalLink href="https://github.com/Pixelsia/pixelsia_blog">Source Code</ExternalLink>
       </div>
     </nav>
   )

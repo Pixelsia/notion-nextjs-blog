@@ -7,8 +7,8 @@ export default function Container(props) {
   const { children, ...customMeta } = props
   const router = useRouter()
   const meta = {
-    title: 'A Next.js, Notion, Tailwind CSS starter blog template',
-    description: `An open-source starter blog template that is statically generated with Next.js, content powered by Notion and styled with Tailwind CSS.`,
+    title: 'Pixelsiaの開発ブログ',
+    description: `しょうもない記事から、おもしろい記事まで、Pixelsiaの開発ブログです。`,
     type: 'website',
     image: '/site.png',
     ...customMeta,
@@ -29,7 +29,7 @@ export default function Container(props) {
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@luciovilla" />
+        <meta name="twitter:site" content="@Pixelsia_JP" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
