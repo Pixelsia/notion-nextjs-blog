@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { getNotionData } from '../lib/getNotionData'
 import dynamic from 'next/dynamic'
 
-const AnimationBg = dynamic(() => import('../components/AnimationBg'))
+const AnimationBg = dynamic(() => import('../components/AnimationBg2'))
 
 export default function Home({ posts }) {
   return (
@@ -23,6 +23,7 @@ export default function Home({ posts }) {
             </p>
           </div>
         </div>
+        <AnimationBg />
       </div>
       <div className="max-w-2xl mx-auto mb-16 px-4 sm:px-0">
         <h2 className="font-bold text-2xl md:text-3xl tracking-tight mb-4 mt-8 text-black">
