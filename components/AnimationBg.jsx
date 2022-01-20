@@ -7,17 +7,23 @@ const AnimationContainer = () => {
   const containerRef = useRef(null)
   useEffect(() => {
     if (!vantaEffect) {
-      setVantaEffect(
-        GLOBE({
-          el: containerRef.current,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          THREE,
-        })
-      )
+      ;(async () => {
+        const [THREE, GLOBE] = await Promise.all([
+          import('three'),
+          import('vanta/dist/vanta.globe.min'),
+        ])
+        setVantaEffect(
+          GLOBE.default({
+            el: containerRef.current,
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.0,
+            minWidth: 200.0,
+            THREE,
+          })
+        )
+      })()
     }
     return () => {
       if (vantaEffect) vantaEffect.destroy()

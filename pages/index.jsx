@@ -52,7 +52,7 @@ export default function Home({ posts }) {
   )
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const database = await getNotionData(process.env.NOTION_DATABASE_ID)
 
   return {

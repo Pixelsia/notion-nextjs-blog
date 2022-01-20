@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 const ExternalLink = ({ href, children }) => (
-  <a className="p-1 sm:p-4 hover:underline" target="_blank" rel="noopener noreferrer" href={href}>
+  <a className="p-4 sm:p-4 hover:underline" target="_blank" rel="noopener noreferrer" href={href}>
     {children}
   </a>
 )
